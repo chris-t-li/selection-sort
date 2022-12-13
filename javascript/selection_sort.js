@@ -1,5 +1,20 @@
 function selectionSort(arr) {
-  // type your code here
+  const sortedArray = [];
+  const arrLen = arr.length
+
+  for (let i = 0; i < arrLen; i++) {
+    // Find the minimum value in the array (Math.min(...arr)) 
+    const minValue = Math.min(...arr);
+    // Find the index of this value in the array
+    const minValueIndex = arr.indexOf(minValue);
+    // Push the minimum value into the empty array
+    sortedArray.push(minValue);
+    // Remove minValue from arr
+    arr.splice(minValueIndex, 1)
+    // console.log(sortedArray)
+  }
+
+  return sortedArray
 }
 
 if (require.main === module) {
